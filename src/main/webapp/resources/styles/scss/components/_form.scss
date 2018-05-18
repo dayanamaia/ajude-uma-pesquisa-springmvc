@@ -1,0 +1,108 @@
+.c-form {
+    padding-bottom: 20px;
+    input,
+    select,
+    textarea {
+        padding: 14px 10px;
+        border: 1px solid color($gray, 400);
+        background-color: color($white, 100);
+        border-radius: 4px;
+        //box-shadow: 1px 1px 15px rgba(197, 181, 181, 0.8);
+        width: 100%;
+        outline-color: color($blue, 100);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+    }
+
+    .c-form__group {
+        &.c-form__group--right {
+            text-align: right;
+        }
+        &.c-form__group--top {
+            margin-top: 20px;
+        }
+    }
+    
+    @for $i from 1 through 6 {
+        .col-form-#{$i} { 
+            @include bp($tablet) {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 1.4%;
+                width: calc(96.4% / #{$i});
+            }
+        }
+    }
+
+    .col-form--align {
+        vertical-align: bottom;
+    }
+
+    .c-form-search__group {
+        &.c-form__form-group--search {
+            display: block;
+            max-width: 400px;
+            margin: 0 auto 60px auto;
+
+            &::before {
+                display: block;
+                content: '';
+                max-width: 400px;
+                height: 45px;
+                position: absolute;
+                top: 0;
+                left: 4px;
+                background-color: color($yellow, 200);
+            }
+            #search {
+                position: relative;
+            }
+        }
+
+        &.c-form-search__group--inline {
+            .form-search__control {
+                margin-bottom: 10px;
+                
+                @include bp($tablet) {
+                    display: inline-block;
+                    width: calc(92% / 2);
+                    vertical-align: top;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .col-form__sort {
+                line-height: 40px;
+                margin-right: 0;
+                
+                @include bp($tablet) {
+                    text-align: right;
+                }
+                
+                label {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .btn {
+      background: #6e81f4;
+      border: 0;
+      color: #f5f3f3;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 8px rgba(109, 129, 244, .6);
+      margin-top: 40px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+}

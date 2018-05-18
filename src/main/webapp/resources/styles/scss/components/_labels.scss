@@ -1,0 +1,22 @@
+.c-label {
+    padding: 2px 10px;
+    background-color: color($gray, 400);
+    vertical-align: middle;
+    border-radius: 4px;
+    @include em(12);;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    &.c-label--remedio {
+        background-color: color($gray, 600);
+        color: color($blue, 100);
+    }
+    &.c-label--reabilitacao {
+        background-color: color($pink, 200);
+        color: color($pink, 100);
+    }
+    &.c-label--questionario {
+        background-color: color($orange, 200);
+        color: color($orange, 100);
+    }
+}

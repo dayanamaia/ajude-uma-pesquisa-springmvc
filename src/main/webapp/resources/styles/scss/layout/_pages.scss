@@ -1,0 +1,52 @@
+.research {
+    background-color: color($gray, 300);
+    padding: 60px 0;
+
+    .filter {
+        .container {
+            border-bottom: 4px double #ccc;
+        }
+    }
+
+    #f-research {
+        border-radius: 6px;
+        background-color: color($white, 100);
+        padding: 30px;
+        box-shadow: 10px 13px 38px rgb(210, 210, 216);
+    }
+}
+
+.l-form {
+    .l-form__cover,
+    .l-form__info {
+        @include bp($desktop) {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(98%/2);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+
+    .l-form_link {
+        color: color($pink, 100);
+        float: right;
+        line-height: 46px;
+        @include em(13);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.pg-register {
+    min-height: 420px;
+    padding: 40px 0;
+}

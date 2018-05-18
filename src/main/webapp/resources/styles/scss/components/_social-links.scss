@@ -1,0 +1,11 @@
+.c-social-links {
+    .c-social-links__link {
+        margin-left: 10px;
+        font-size: 0;
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: color($yellow, 200);
+        }
+    }
+}

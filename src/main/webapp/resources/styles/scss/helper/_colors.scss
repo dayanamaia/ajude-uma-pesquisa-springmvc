@@ -1,0 +1,11 @@
+$yellow: ( 100: #fffc0c, 200:#f8f889);
+$blue: ( 100: #6e81f4);
+$pink: (100: #ff6c6c, 200: #fac9c4);
+$white: (100: #fff, 200:#f4f4f4);
+$gray: (100: #e7eaed, 200: #75797f, 300: #f1f2f3, 400:#c3c3c3, 500:#4b4c4e, 600: #c8c9cb);
+$black: (100: #000000, 200: #192332 );
+$orange: (100: #ff9800, 200: #f8d7a4 );
+
+@function color($colors, $key) {
+    @return map-get($colors, $key);
+}

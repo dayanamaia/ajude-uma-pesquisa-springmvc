@@ -1,0 +1,55 @@
+.c-nav {
+    list-style: none;
+    .c-nav__item {
+        list-style: none;
+        position: relative;
+        margin: 0 0 14px 0;
+        @include bp($desktop) {
+            display: inline-block;
+            margin: 0 0 0 28px;
+            vertical-align: top;
+            
+            &::after {
+                position: absolute;
+                top: 120%;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: rgba(0,0,0,.1);
+                content: "";
+                opacity: 0;
+                transition: opacity .3s,-webkit-transform .3s;
+                transition: opacity .3s,transform .3s;
+                transition: opacity .3s,transform .3s,-webkit-transform .3s;
+                -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+            }
+        }
+        .c-nav__link {
+            @include em(18);
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            display: block;
+            letter-spacing: 1px;
+            @include bp($desktop) {
+                @include em(16);
+            }
+        }
+        &.c-nav__item--icon {
+            .c-nav__link {
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        .c-nav__dropdown {
+            .c-nav__dropdown-item {
+                display: block;
+                text-decoration: none;
+                margin: 10px 0;
+            }
+        }
+    }
+}

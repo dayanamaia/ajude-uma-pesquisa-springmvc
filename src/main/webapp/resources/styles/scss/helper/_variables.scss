@@ -1,0 +1,24 @@
+$title-regular: 'montserratregular';
+$title-semibold: 'montserratsemibold';
+$paragrah-regular: 'catamaranregular';
+
+$mobile: "(max-width: 758px)";
+$mobile568: "(max-width: 568px)";
+$mobile-land: "(max-width: 758px) and (orientation: landscape)";
+$tablet-portrait: "(max-width: 767px )";
+$tablet-landscape: "(min-width: 768px ) and (max-width: 979px)";
+$tablet: "(min-width: 768px )";
+$desktop: "(min-width: 1000px)";
+$desktop-notebook: "(max-width: 1280px)";
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+
+@mixin em($pixels) {
+    font-size: #{$pixels}px;
+    font-size: #{$pixels/16}em;
+}
+
+@mixin bp($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
