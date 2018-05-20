@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 
-<tags:master title="AjudeUmaPesquisa">
+<tags:master title="#AjudeUmaPesquisa">
 
           <section class="c-banner">
               <div class="container">
@@ -29,23 +29,23 @@
                         <input type="search" class="c-form__form-control" id="search" placeholder="Digite o nome da pesquisa Clínica">
                     </div>
                     <div class="c-form-search__group c-form-search__group--inline">
-                      <div class="col-form">
-                        <label for="research-type" class="is-hidden">Tipo de pesquisa</label>
-                        <select id="research-type" class="form-search__control">
+                      <div class="col-form-2">
+                        <label for="research_type" class="is-hidden">Tipo de pesquisa</label>
+                        <select id="research_type" class="form-search__control">
                           <option>Tipo de pesquisa</option>
                           <option>Remédio</option>
                           <option>Reabilitaçãoa</option>
                           <option>Questionário</option>
                         </select>
-                        <label for="research-state" class="is-hidden">Estado</label>
-                        <select id="research-state" class="form-search__control">
+                        <label for="research_state" class="is-hidden">Estado</label>
+                        <select id="research_state" class="form-search__control">
                           <option>Estado</option>
                           <option>Estado</option>
                         </select>
                       </div>
-                      <div class="col-form col-form__sort">
-                        <label for="research-sort">Ordenar por</label>
-                        <select id="research-sort" class="form-search__control">
+                      <div class="col-form-2 col-form__sort">
+                        <label for="research_sort">Ordenar por</label>
+                        <select id="research_sort" class="form-search__control">
                           <option>Ordenar por</option>
                           <option>Data mais recente</option>
                         </select>
@@ -56,114 +56,26 @@
             </div>
             <div class="list-card">
               <div class="container">
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-card">
-                  <div class="c-card__content">
-                    <a href="">
-                      <h3 class="c-card__title">Accelerating IoT deployment for under $50</h3>
-                      <p class="c-card__detail">Cheap & ease onborading, fully customizable plans, and developer-friendly APs enable companies to get up and runnin quickly. Even with limited budgets.</p>
-                    </a>
-                    <a href="">
-                      <p class="c-card__location">São Paulo</p>
-                    </a>
-                  </div>
-                  <div class="c-card__footer">
-                    <div class="c-card__labels">
-                      <span class="c-label c-label--remedio">remédio</span>
-                      <span class="c-label c-label--reabilitacao">reabilitação</span>
-                      <span class="c-label c-label--questionario">questionário</span>
-                    </div>
-                  </div>
-                </div>
+              	<c:forEach items="${PesquisaClinica }" var="p">
+	              	<div class="c-card">
+	                  <div class="c-card__content">
+	                    <a href="${p.id }">
+	                      <h3 class="c-card__title">${p.nome }</h3>
+	                      <p class="c-card__detail">${p.descricao }</p>
+	                    </a>
+	                    <a href="${p.id }">
+	                      <p class="c-card__location">São Paulo</p>
+	                    </a>
+	                  </div>
+	                  <div class="c-card__footer">
+	                    <div class="c-card__labels">
+	                      <span class="c-label c-label--remedio">remédio</span>
+	                      <span class="c-label c-label--reabilitacao">reabilitação</span>
+	                      <span class="c-label c-label--questionario">questionário</span>
+	                    </div>
+	                  </div>
+	                </div>
+              	</c:forEach>
               </div>
             </div>
           </section>
