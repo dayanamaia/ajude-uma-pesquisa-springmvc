@@ -59,11 +59,12 @@
               	<c:forEach items="${PesquisaClinica }" var="p">
 	              	<div class="c-card">
 	                  <div class="c-card__content">
-	                    <a href="${p.id }">
+	                  	<c:url value="/pesquisa-clinica/${p.id }" var="link"/>
+	                    <a href="${link}">
 	                      <h3 class="c-card__title">${p.nome }</h3>
 	                      <p class="c-card__detail">${p.descricao }</p>
 	                    </a>
-	                    <a href="${p.id }">
+	                    <a href="${link}">
 	                      <p class="c-card__location">São Paulo</p>
 	                    </a>
 	                  </div>
