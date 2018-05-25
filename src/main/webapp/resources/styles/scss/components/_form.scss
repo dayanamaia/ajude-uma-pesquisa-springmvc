@@ -1,5 +1,6 @@
 .c-form {
     padding-bottom: 20px;
+    position: relative;
     input,
     select,
     textarea {
@@ -10,6 +11,7 @@
         //box-shadow: 1px 1px 15px rgba(197, 181, 181, 0.8);
         width: 100%;
         outline-color: color($blue, 100);
+        font-family: $paragrah-regular;
     }
 
     input[type="radio"],
@@ -59,6 +61,7 @@
             }
             #search {
                 position: relative;
+                padding-right: 50px;
             }
         }
 
@@ -90,19 +93,56 @@
         }
     }
 
-    .btn {
+    .c-form__box {
+        position: relative;
+    }
+
+    .c-form__btn {
       background: #6e81f4;
       border: 0;
       color: #f5f3f3;
       font-weight: bold;
       padding: 10px 20px;
-      border-radius: 4px;
-      box-shadow: 2px 2px 8px rgba(109, 129, 244, .6);
+      border-radius: 20px;
+      box-shadow: 0px 6px 14px rgba(109, 129, 244, 0.8);
       margin-top: 40px;
       cursor: pointer;
+      -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+      -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+      -ms-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+      -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 
       &:hover {
         opacity: .9;
+
+        @include bp($desktop) {
+            -webkit-transform: scale(1.035);
+            -moz-transform: scale(1.035);
+            -ms-transform: scale(1.035);
+            -o-transform: scale(1.035);
+            opacity: 1;
+        }
       }
+    }
+    .c-form__btn-icon {
+        background: transparent;
+        border: 0;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: color($pink, 100);
+        } 
+    }
+
+    .c-form__link {
+        color: color($pink, 100);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

@@ -21,15 +21,15 @@
     <div id="site">
       <header role="heading">
           <div class="container">
-            <a href="/" class="logo" title="#AjudeUmaPesquisa">
+            <a href="<c:url value="/"/>" class="logo" title="#AjudeUmaPesquisa">
                 <img src="<c:url value="/resources/images/layout/logo-ajude-uma-pesquisa.png"/>" alt="#AjudeUmaPesquisa">#AjudeUmaPesquisa
             </a>
             <div class="menu" role="navigation">
                 <div class="acion-menu-mobile">
                   <span class="icon ico-menu">
                       <svg>
-                          <use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#menu"/>" />
-                        </svg>
+                        <use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#menu"/>" />
+                      </svg>
                   </span>
                   <span class="icon ico-close">
                       <svg>
@@ -78,20 +78,6 @@
                 <li class="c-nav__item"><a href="" title="Pesquisas Clínicas" class="c-nav__link">Pesquisas Clínicas</a></li>
                 <li class="c-nav__item"><a href="" title="Voluntários" class="c-nav__link">Voluntários</a></li>
                 <li class="c-nav__item"><a href="" title="FAQ" class="c-nav__link">FAQ</a></li>
-                <li class="c-nav__item c-nav__item--icon">
-                  <a href="" title="Cadastrar" class="c-nav__link dropdown-toggle">Cadastrar
-                  <svg><use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#arrow-option"/>"></svg>
-                </a>
-                <div class="c-nav__dropdown">
-                  <a class="c-nav__dropdown-item" href="#" title="Pesquisador Clínico">Pesquisador Clínico</a>
-                  <a class="c-nav__dropdown-item" href="#" title="Laboratório Clínico">Laboratório Clínico</a>
-                </div>
-              </li>
-                <li class="c-nav__item c-nav__item--icon">
-                  <a href="" title="Entrar" class="c-nav__link">Entrar
-                    <svg><use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#arrow"/>"></svg>
-                  </a>
-                </li>
               </ul>
             </div>
             <div class="obs">

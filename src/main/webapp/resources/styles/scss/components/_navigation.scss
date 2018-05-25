@@ -37,11 +37,9 @@
             }
         }
         &.c-nav__item--icon {
-            .c-nav__link {
-                svg {
-                    width: 10px;
-                    height: 10px;
-                }
+            svg {
+                width: 10px;
+                height: 10px;
             }
         }
         .c-nav__dropdown {
@@ -50,6 +48,28 @@
                 text-decoration: none;
                 margin: 10px 0;
             }
+        }
+        .c-nav__icon {
+            &.c-nav__icon--user {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.c-nav-settings {
+    padding: 20px;
+    a {
+        font-size: 0;
+    }
+    .c-nav-settings__link {
+        display: block;
+        margin: 20px 0;
+        svg {
+            fill: color($pink, 100);
+            width: 20px;
+            height: 20px;
         }
     }
 }

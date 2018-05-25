@@ -8,8 +8,8 @@
 	<section class="c-banner">
 	    <div class="container">
 	      <div class="c-banner__info">
-	        <h2 class="c-banner__title">${PesquisaClinica.nome }</h2>
-	        <p class="c-banner__description">${PesquisaClinica.descricao }</p>
+	        <h2 class="c-banner__title">${pesquisaClinica.nome }</h2>
+	        <p class="c-banner__description">${pesquisaClinica.descricao }</p>
 	      </div>
 	      <div class="banner__cover">
 	      	<img src="<c:url value="/resources/images/banner/ajude-uma-pesquisa-info.png"/>" alt="#AjudeUmaPesquisa" class="banner__img">

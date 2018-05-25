@@ -56,7 +56,7 @@
             </div>
             <div class="list-card">
               <div class="container">
-              	<c:forEach items="${PesquisaClinica }" var="p">
+              	<c:forEach items="${pesquisaClinica }" var="p">
 	              	<div class="c-card">
 	                  <div class="c-card__content">
 	                  	<c:url value="/pesquisa-clinica/${p.id }" var="link"/>

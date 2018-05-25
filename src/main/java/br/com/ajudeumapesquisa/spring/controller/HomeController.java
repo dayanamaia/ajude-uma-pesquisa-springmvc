@@ -15,7 +15,7 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public ModelAndView listar() {
-		return new ModelAndView("home/index").addObject("PesquisaClinica",dao.listar());
+		return new ModelAndView("home/index").addObject("pesquisaClinica",dao.listar());
 	}
 	
 

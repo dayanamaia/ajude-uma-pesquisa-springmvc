@@ -17,24 +17,74 @@
 }
 
 .l-form {
-    .l-form__cover,
+    .container {
+        -webkit-display: -webkit-box;
+        -webkit-display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-flow: column-reverse;
+        
+        @include bp($desktop) {
+            -webkit-display: inherit;
+            -webkit-display: inherit;
+            display: inherit;
+            display: inherit;
+            display: inherit;
+        }
+    }
+
+    .l-form__cover {
+        @include bp($desktop) {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(70%/2);
+        }
+    }
     .l-form__info {
         @include bp($desktop) {
             display: inline-block;
             vertical-align: top;
             width: calc(98%/2);
+            margin: 0 0 0 14%;
+        }
+    }
+
+    .l-form__info-user {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        .l-form__nav-setings {
+            position: absolute;
+            right: -90px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            border-left: 1px solid #ececec;
         }
     }
 
     img {
+        margin: 40px auto;
+        display: block;
         width: 100%;
+        @include bp($desktop) {
+            margin: 40% auto;
+        }
     }
 
     h2 {
         display: inline-block;
+        span {
+            @include em(10);
+            color: color($gray, 200);
+            letter-spacing: 1px;
+            font-weight: 100;
+        }
     }
 
-    .l-form_link {
+    .l-form_link, {
         color: color($pink, 100);
         float: right;
         line-height: 46px;
@@ -48,5 +98,9 @@
 
 .pg-register {
     min-height: 420px;
-    padding: 40px 0;
+    padding: 10px 0;
+    
+    @include bp($desktop) {
+        padding: 40px 0;
+    }
 }
