@@ -1,6 +1,4 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ page contentType="text/html;charset=UTF-8" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
@@ -9,22 +7,9 @@
           <section class="pg-register l-form">
               <div class="container">
                 <div class="l-form__info-user">
-                    <div class="l-form__nav-setings">
-                        <div class="c-nav-settings">
-                            <a href="" title="Dashboard" class="c-nav-settings__link">
-                                Dashboard
-								<svg>
-									<use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#note"/>" />
-								</svg>
-                            </a>
-                            <a href="" title="Cadastrar uma Pesquisa Clínica" class="c-nav-settings__link">
-                                Cadastrar uma Pesquisa Clínica
-								<svg>
-									<use xlink:href="<c:url value="/resources/svg/svg/symbols.svg#plus"/>" />
-								</svg>
-                            </a>
-                        </div>
-                    </div>
+                  <div class="l-form__nav-setings">
+					<%@include file="/WEB-INF/jsp/shared/nav-settings.jsp" %>
+                  </div>
                   <div class="l-form__box-register">
                     <div class="l-form__header">
                       <h2>Cadastro de Pesquisa Clínica</h2>

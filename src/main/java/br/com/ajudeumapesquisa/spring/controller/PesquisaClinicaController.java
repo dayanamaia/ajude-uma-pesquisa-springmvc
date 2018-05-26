@@ -20,6 +20,11 @@ public class PesquisaClinicaController {
 	@Autowired
 	private PesquisaClinicaDAO dao;
 	
+	@GetMapping("lista")
+	public ModelAndView listar() {
+		return new ModelAndView("pesquisa-clinica/lista").addObject("pesquisaClinica",dao.listar());
+	}
+	
 	@GetMapping("{id}")
 	public ModelAndView buscar(@PathVariable("id") int id) {
 		return new ModelAndView("pesquisa-clinica/view").addObject("pesquisaClinica", dao.buscar(id));
