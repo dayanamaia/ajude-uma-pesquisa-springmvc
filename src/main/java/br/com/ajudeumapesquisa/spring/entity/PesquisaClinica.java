@@ -15,6 +15,7 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="T_AUP_PESQUISA_CLINICA")
@@ -51,10 +52,12 @@ public class PesquisaClinica implements Serializable {
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="dt_inicio", nullable=false)
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataInicio;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="dt_termino", nullable=false)
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataTermino;
 	
 	@Column(name="nm_pesquisador_responsavel", length = 100, nullable=false)

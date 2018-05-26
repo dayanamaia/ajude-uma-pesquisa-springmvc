@@ -30,16 +30,16 @@ public class PesquisaClinicaController {
 		return"pesquisa-clinica/cadastro";
 	}
 	
-	@Transactional
 	@PostMapping("cadastrar")
+	@Transactional
 	public ModelAndView processarForm(PesquisaClinica pesquisaClinica, RedirectAttributes redirect) {
 		try{
 			dao.cadastrar(pesquisaClinica);
-			redirect.addFlashAttribute("msg", "Pesquisa Clinica cadastrada com sucesso");
-		} catch(Exception e) {
-			return new ModelAndView("pesquisa-clinica/cadastro").addObject("msg", e.getMessage());
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new ModelAndView("pesquisa-clinica/cadastro");
 		}
-		
+		redirect.addFlashAttribute("msg", "Pesquisa Clinica cadastrada com sucesso");
 		return new ModelAndView("redirect:/pesquisa-clinica/cadastrar");
 	}
 }
