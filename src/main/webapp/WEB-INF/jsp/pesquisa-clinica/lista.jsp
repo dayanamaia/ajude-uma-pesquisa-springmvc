@@ -16,7 +16,7 @@
                    	<ul>
                    		<c:forEach items="${pesquisaClinica }" var="p">
                    			<li>${p.nome }
-                   				<c:url value="/pesuisa-clinica/editar/${p.id }" var="link"/>
+                   				<c:url value="/pesquisa-clinica/editar/${p.id }" var="link"/>
 								<a href="${link}" class="btn">Editar</a>
                    			</li>
                    		</c:forEach>

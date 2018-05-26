@@ -35,6 +35,11 @@ public class PesquisaClinicaController {
 		return"pesquisa-clinica/cadastro";
 	}
 	
+	@GetMapping("editar/{id}")
+	public ModelAndView editar(@PathVariable("id") int id) {
+		return new ModelAndView("pesquisa-clinica/edicao").addObject("pesquisaClinica", dao.buscar(id));
+	}
+	
 	@PostMapping("cadastrar")
 	@Transactional
 	public ModelAndView processarForm(PesquisaClinica pesquisaClinica, RedirectAttributes redirect) {
@@ -46,5 +51,18 @@ public class PesquisaClinicaController {
 		}
 		redirect.addFlashAttribute("msg", "Pesquisa Clinica cadastrada com sucesso");
 		return new ModelAndView("redirect:/pesquisa-clinica/cadastrar");
+	}
+	
+	@PostMapping("editar")
+	@Transactional
+	public ModelAndView editar(PesquisaClinica pesquisaClinica, RedirectAttributes redirect) {
+		try{
+			dao.atualizar(pesquisaClinica);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new ModelAndView("pesquisa-clinica/edicao");
+		}
+		redirect.addFlashAttribute("msg", "Pesquisa Clinica cadastrada com sucesso");
+		return new ModelAndView("redirect:/pesquisa-clinica/lista");
 	}
 }
