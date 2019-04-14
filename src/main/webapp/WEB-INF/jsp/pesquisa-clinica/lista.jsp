@@ -15,14 +15,33 @@
                     </div>
                    	<ul>
                    		<c:forEach items="${pesquisaClinica }" var="p">
-                   			<li>${p.nome }
+                   			<li>
                    				<c:url value="/pesquisa-clinica/editar/${p.id }" var="link"/>
-								<a href="${link}" class="btn">Editar</a>
+                   				<a href="<c:url value="/pesquisa-clinica/${p.id }"/>">${p.nome }</a>
+                   				<div>
+                   					<a href="${link}" class="btn">Editar</a>
+                   					<a href="${link}" class="btn">Excluir</a>
+                   				</div>
                    			</li>
                    		</c:forEach>
                    	</ul>
                   </div>
                 </div>
+                <div class="bg-overlay"></div>
+				<div class="modal-delete" role="dialog" aria-labelledby="ModalLabel">
+					<div class="close">x</div>
+					<h4 class="title-modal" id="ModalLabel">Tem certeza?</h4>
+					<p class="description-modal">Após excluir esse item, essa ação não poderá ser desfeita!</p>
+				
+					<div class="btn-modal">
+				     	<c:url value="/pesquisa-clinica/excluir" var="action"/>
+				      	<form action="${action }" method="post">
+				      		<input type="hidden" name="id" id="idExcluir">
+					       <button type="button" class="btn cancel" title="Cancelar" data-dismiss="modal">Cancelar</button>
+					       <button type="submit" class="btn" title="Excluir">Excluir</button>
+				        </form>
+					</div>
+				</div>
               </div>
           </section>
 </tags:master>

@@ -12,18 +12,18 @@
                   </div>
                   <div class="l-form__box-register">
                     <div class="l-form__header">
-                      <h2>Cadastro de Pesquisa Clínica</h2>
+                      <h2>Edição da Pesquisa Clínica</h2>
                       ${msg }
                     </div>
                     <c:url value="/pesquisa-clinica/editar" var="action"/>
-                    <form:form action="${action }" method="post" commandName="pesquisaClinica" class="c-form">
+                    <form:form action="${action }" method="post" commandName="pesquisaClinica" accept-charset="iso-8859-1,utf-8" class="c-form">
 						<form:hidden path="id"/>
                         <div class="c-form__group">
                             <form:label path="nome" class="c-form__label hidden-label">Nome da pesquisa clínica</form:label>
                             <form:input path="nome" id="name" minlength="8" maxlength="100" required="required" title="Digite o nome da pesquisa clínica" placeholder="Nome da pesquisa clínica" class="form-input"/>
                         </div>
                         <div class="c-form__group">
-                          <form:label path="descricao" class="c-form__label hidden-label">Descricao</form:label>
+                          <form:label path="descricao" class="c-form__label hidden-label">Descrição</form:label>
                           <form:textarea path="descricao" id="" cols="30" rows="8" minlength="8" maxlength="300" required="required" title="Digite a descrição da pesquisa clínica" placeholder="Descrição da pesquisa clínica"/>
                         </div>
                         <div class="c-form__group">
